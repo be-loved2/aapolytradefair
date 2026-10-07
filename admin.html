@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trade Fair Administration</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="admin.css"></head><body>
+<section id="login"><form id="lform"><img src="assets/aap-logo.png" alt="" class="logo"><h2>ADMIN LOGIN</h2>
+<input id="em" type="email" placeholder="Admin email" required autocomplete="username"><input id="pw" type="password" placeholder="Password" required autocomplete="current-password">
+<p id="lerr" class="err"></p><button class="green" style="width:100%">LOG IN</button></form></section>
+<div id="dash" hidden>
+<header class="ah"><img src="assets/aap-logo.png" alt="" class="logo"><div><h1>TRADE FAIR ADMINISTRATION</h1><p>ABRAHAM ADESANYA POLYTECHNIC</p></div><button class="red" id="logout">LOG OUT</button></header>
+<main class="am"><div class="stats"><div><span>TOTAL VENDORS</span><b id="sV">0</b></div><div><span>TOTAL STALLS</span><b id="sS">0</b></div><div><span>TOTAL EXPECTED SPACE RENTAL</span><b id="sA">₦0</b></div></div>
+<div class="cats" id="cats"></div>
+<div class="bar"><input id="q" placeholder="Search reg. no, name, business or phone"><select id="fc"><option value="">All categories</option><option>Food &amp; Beverages</option><option>Fashion &amp; Lifestyle</option><option>Beauty &amp; Personal Care</option><option>Technology &amp; Innovation</option><option>Arts, Crafts &amp; Others</option></select>
+<select id="fd"><option value="">All dates</option><option>Tuesday, 13th October 2026</option><option>Wednesday, 14th October 2026</option><option>Thursday, 15th October 2026</option></select><button class="gold" id="exp" style="width:auto">EXPORT VENDORS</button></div>
+<div class="tw"><table id="tbl"><thead><tr><th>Registration No.</th><th>Vendor Name</th><th>Business Name</th><th>Category</th><th>Phone</th><th>Stalls</th><th>Total Amount</th><th>Registration Date</th><th>Action</th></tr></thead><tbody></tbody></table></div></main></div>
+<div id="modal" hidden><div class="mbox"><div id="mdoc" class="docwrap"></div><div class="actions"><button class="gold" id="mprint" style="width:auto">PRINT REGISTRATION FORM</button><button class="green" id="mclose">CLOSE</button></div></div></div>
+<div id="printArea"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script><script src="script.js"></script><script src="admin.js"></script></body></html>
