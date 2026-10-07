@@ -14,6 +14,7 @@ function docHTML(v) {
 <table>${row('Registration Number', v.registration_number)}${row('Vendor Name', v.full_name)}${row('Business Name', v.business_name)}${row('Phone', v.phone)}${row('Email', v.email)}${row('Business Address', v.business_address)}${row('Category', v.category)}${row('Product / Service', v.product_service)}${row('Description', v.description)}${row('Number of Stalls', v.number_of_stalls)}${row('Total Amount', naira(v.total_amount))}${row('Selected Dates', dates)}${row('Registered On', d)}</table>
 <div class="doc-ev"><div><b>VENUE:</b><br>TETFUND HALL OPEN SPACE</div><div><b>TIME:</b><br>10:00 AM DAILY</div><div><b>DATE:</b><br>13TH – 15TH OCTOBER 2026</div></div>
 <div class="sign"><div>Vendor Signature:<br><i></i></div><div>Date:<br><i></i></div></div>
+<div class="doc-off"><h4>FOR OFFICIAL USE ONLY</h4><div><section><p>Vendor ID/No.: <u></u></p><p>Stall/Table No.: <u></u></p><p>Amount Paid: ₦ <u></u></p></section><section><p>Payment Status: &#9744; Paid &nbsp; &#9744; Pending</p><p>Assigned By: <u></u></p><p>Remarks: <u></u></p></section></div></div>
 <div class="doc-foot"><div><b>REGISTRATION DEADLINE:</b> THURSDAY, 8TH OCTOBER 2026</div><div><b>FOR ENQUIRIES:</b> +234 903 416 2279 · 08105232909</div></div></div>`;
 }
 function printDoc(v) {
