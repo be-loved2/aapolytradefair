@@ -14,3 +14,4 @@ body{background:#eef3ee}
 #tbl button{padding:6px 10px;font-size:.75rem;margin-right:4px}
 #modal{position:fixed;inset:0;background:rgba(0,0,0,.6);overflow:auto;padding:14px;z-index:9}#modal[hidden]{display:none}
 .mbox{background:#fff;max-width:230mm;margin:auto;padding:14px;border-radius:8px}
+#login[hidden]{display:none}
