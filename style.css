@@ -42,3 +42,12 @@ button:disabled{opacity:.6}.err{color:var(--red);font-weight:600;min-height:1em}
 @media(max-width:700px){.grid,.grid2{grid-template-columns:1fr}.doc{zoom:.5}}
 @page{size:A4 portrait;margin:10mm}
 @media print{body>*:not(#printArea){display:none!important}#printArea{display:block!important}body{background:#fff}.doc{zoom:1;border:3px double var(--g);width:100%;min-height:0;padding:6mm}}
+/* Flyer-style theme */
+.hero{background:#fff url(assets/building.jpg) right top/auto 100% no-repeat;color:var(--g);position:relative;justify-content:flex-start;padding-left:max(14px,6vw)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 45%,rgba(255,255,255,0) 80%)}.hero>*{position:relative}
+.hero div{text-align:center}.sub{color:var(--g);font-weight:700}.badge{background:var(--gd);color:#fff}
+label i{color:var(--red);font-style:normal}
+.grid>div{min-width:0}
+.official p{margin:10px 0}.official u{display:inline-block;width:55%;border-bottom:1px solid #444;height:1em;vertical-align:bottom;text-decoration:none}
+.foot{display:flex;justify-content:space-around;gap:10px;flex-wrap:wrap;align-items:center;text-align:center}.foot em{font-family:cursive;color:var(--gold);font-size:1rem}
+@media(max-width:700px){.hero{background-image:none;justify-content:center;padding-left:14px}.hero::before{display:none}.hero div{color:var(--g)}}

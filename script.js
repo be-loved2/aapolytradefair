@@ -24,7 +24,7 @@ function printDoc(v) {
 (function () {
   const f = document.getElementById('vform'); if (!f) return;
   const states = ['Abia','Adamawa','Akwa Ibom','Anambra','Bauchi','Bayelsa','Benue','Borno','Cross River','Delta','Ebonyi','Edo','Ekiti','Enugu','FCT','Gombe','Imo','Jigawa','Kaduna','Kano','Katsina','Kebbi','Kogi','Kwara','Lagos','Nasarawa','Niger','Ogun','Ondo','Osun','Oyo','Plateau','Rivers','Sokoto','Taraba','Yobe','Zamfara'];
-  f.state.innerHTML += states.map(s => `<option${s === 'Ogun' ? ' selected' : ''}>${s}</option>`).join('');
+  f.state.innerHTML += states.map(s => `<option${''}>${s}</option>`).join('');
   const st = document.getElementById('stalls');
   for (let i = 1; i <= 20; i++) st.innerHTML += `<option>${i}</option>`;
   const calc = () => { const n = parseInt(st.value) || 1; tStalls.textContent = n; tAmt.textContent = naira(n * RATE); };
@@ -37,7 +37,7 @@ function printDoc(v) {
     if (!dates.length) { err.textContent = 'Please select at least one participation date.'; return; }
     if (!decl.checked) { err.textContent = 'Please accept the declaration.'; return; }
     if (!sb) { err.textContent = 'System not configured. Please edit config.js.'; return; }
-    const g = n => f.elements[n].value.trim();
+    const g = n => (f.elements[n] ? f.elements[n].value : '').trim();
     const p = {}; ['full_name','business_name','contact_person','phone','whatsapp','email','business_address','city','state','category','product_service','description','special_requirements'].forEach(k => p[k] = g(k));
     p.number_of_stalls = parseInt(st.value); p.participation_dates = dates; // total is computed by the database, not sent
     submitBtn.disabled = true; submitBtn.textContent = 'SUBMITTING...';
